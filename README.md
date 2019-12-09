@@ -40,9 +40,7 @@ instance Semigroup (Valor a) where
 instance Monoid (Valor a) where
   mempty = Nada
 ```
-
-     Considerando esse monoide e uma finger tree, implemente o tipo `OrdSeq` que mantém uma lista ordenada. A sua implementação deve seguir o mesmo modelo utilizado para a implementação de Deques, Seq e Heap além de fornececer as seguintes funções:
-
-       - `partition x t` - devolve uma tupla contendo duas `OrdSeq`. Uma contendo todos os elementos em `t` à esqueda de `x` (ou, de forma equivalente, < x) e outra com todos os elementos `>=xs`.
-       - `insert x t` - Recebe um elemento `x` e o insere na `OrdSeq` `t` mantendo a  os elementos ordenados.
-       - `deleteAll x t` - devolve uma `OrdSeq` com todas as ocorrências de `x` removidas.
+   Considerando esse monoide e uma finger tree, implemente o tipo `OrdSeq` que mantém uma lista ordenada. A sua implementação deve seguir o mesmo modelo utilizado para a implementação de Deques, Seq e Heap além de fornececer as seguintes funções:
+   - `partition x t` - devolve uma tupla contendo duas `OrdSeq`. Uma contendo todos os elementos em `t` à esqueda de `x` (ou, de forma equivalente, < x) e outra com todos os elementos `>=xs`.
+   - `insert x t` - Recebe um elemento `x` e o insere na `OrdSeq` `t` mantendo a  os elementos ordenados.
+   - `deleteAll x t` - devolve uma `OrdSeq` com todas as ocorrências de `x` removidas.
