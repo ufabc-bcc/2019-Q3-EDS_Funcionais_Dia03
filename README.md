@@ -30,19 +30,19 @@ Estes exercícios envolvem a alteração do código dado em aula. Uma suite de t
 
   3. A operação binária que devolve como resultado o segundo operando é associativa. Considerando essa operação e um elemento neutro `Nada` podemos definir:
 
-    ``` haskell
-    data Valor a = Nada | UmValor a deriving (Eq, Ord, Show)
+``` haskell
+data Valor a = Nada | UmValor a deriving (Eq, Ord, Show)
 
-    instance Semigroup (Valor a) where
-      v <> Nada = v
-      _ <> v    = v
+instance Semigroup (Valor a) where
+  v <> Nada = v
+  _ <> v    = v
 
-    instance Monoid (Valor a) where
-      mempty = Nada
-    ```
+instance Monoid (Valor a) where
+  mempty = Nada
+```
 
      Considerando esse monoide e uma finger tree, implemente o tipo `OrdSeq` que mantém uma lista ordenada. A sua implementação deve seguir o mesmo modelo utilizado para a implementação de Deques, Seq e Heap além de fornececer as seguintes funções:
 
-     - `partition x t` - devolve uma tupla contendo duas `OrdSeq`. Uma contendo todos os elementos em `t` à esqueda de `x` (ou, de forma equivalente, < x) e outra com todos os elementos `>=xs`.
-     - `insert x t` - Recebe um elemento `x` e o insere na `OrdSeq` `t` mantendo a  os elementos ordenados.
-     - `deleteAll x t` - devolve uma `OrdSeq` com todas as ocorrências de `x` removidas.
+       - `partition x t` - devolve uma tupla contendo duas `OrdSeq`. Uma contendo todos os elementos em `t` à esqueda de `x` (ou, de forma equivalente, < x) e outra com todos os elementos `>=xs`.
+       - `insert x t` - Recebe um elemento `x` e o insere na `OrdSeq` `t` mantendo a  os elementos ordenados.
+       - `deleteAll x t` - devolve uma `OrdSeq` com todas as ocorrências de `x` removidas.
